@@ -7,13 +7,13 @@
     </head>
 
     <body>
-      <h3>Viktor income</h3>
+      <h3>&#128047; Viktor income</h3>
       <input id="income1" type="number"/>
         
-      <h3>Mahshid income</h3>
+      <h3>&#129412; Mahshid income</h3>
       <input id="income2" type="number"/>
 	
-      <h3>Transfer amount</h3>
+      <h3>&#128181; Transfer amount &#128181;</h3>
       <input id="transferAmount" type="number"/>
 	
       </p>
@@ -48,11 +48,11 @@
 	
 	document
 	  .getElementById("output1")
-          .innerHTML = "Viktor transfer: " + person1Transfer;
+          .innerHTML = "Viktor transfer: " + Math.round(person1Transfer);
 	
 	document
   	  .getElementById("output2")
-          .innerHTML = "Mahshid transfer: " + person2Transfer;
+          .innerHTML = "Mahshid transfer: " + Math.round(person2Transfer);
       }
     </script>
 </html>
