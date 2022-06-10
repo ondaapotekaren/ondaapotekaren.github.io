@@ -2,27 +2,28 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <title>Calculate</title>
+      <meta charset="UTF-8">
+      <title>Calculate</title>
     </head>
 
     <body>
-        <h3>Viktor income</h3>
-        <input id="income1" type="number"/>
+      <h3>Viktor income</h3>
+      <input id="income1" type="number"/>
         
-	<h3>Mahshid income</h3>
-        <input id="income2" type="number"/>
+      <h3>Mahshid income</h3>
+      <input id="income2" type="number"/>
 	
+      <h3>Transfer amount</h3>
+      <input id="transferAmount" type="number"/>
 	
-	<h3>Transfer amount</h3>
-        <input id="transferAmount" type="number"/>
+      </p>
+      <button onclick="calc()">Calculate</button>
+ 
+      <p id="output1"/>
+      <p id="output2"/>
 
-	</p>
-        <button onclick="calc()">Calculate</button>
-    
-        <p id="output1"></p>
-	<p id="output2"></p>
     </body>
+
     <script>
       var income1;
       var income2;
@@ -40,16 +41,19 @@
 	.getElementById("transferAmount")
 	.addEventListener("input", () => transferAmount = document.getElementById("transferAmount").value);
 
-
       function calc() {
 	let total = Number(income1) + Number(income2);
 	let person1Transfer = (Number(income1) / total) * transferAmount;
 	let person2Transfer = (Number(income2) / total) * transferAmount;
-	document.getElementById("output1").innerHTML = "Viktor transfer: " + person1Transfer;
-	document.getElementById("output2").innerHTML = "Mahshid transfer: " + person2Transfer;
+	
+	document
+	  .getElementById("output1")
+          .innerHTML = "Viktor transfer: " + person1Transfer;
+	
+	document
+  	  .getElementById("output2")
+          .innerHTML = "Mahshid transfer: " + person2Transfer;
       }
-
     </script>
-
 </html>
 
